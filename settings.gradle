@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "TNPConnect"
-include ':app'
+include ':app', 'TNPConnect'
