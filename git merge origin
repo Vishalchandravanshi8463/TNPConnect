@@ -1,0 +1,43 @@
+[1mdiff --git a/app/src/main/res/drawable/rounded_button_background.xml b/app/src/main/res/drawable/rounded_button_background.xml[m
+[1mindex 192cfa4..2c3f168 100644[m
+[1m--- a/app/src/main/res/drawable/rounded_button_background.xml[m
+[1m+++ b/app/src/main/res/drawable/rounded_button_background.xml[m
+[36m@@ -5,3 +5,11 @@[m
+     <solid android:color="@color/orangeDark" />  <!-- Background color -->[m
+     <corners android:radius="20dp" /> <!-- Adjust the radius as per your requirement -->[m
+ </shape>[m
+[32m+[m
+[32m+[m[32m<!--<shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">-->[m
+[32m+[m[32m<!--<stroke-->[m
+[32m+[m[32m<!--    android:width="3dp" />-->[m
+[32m+[m
+[32m+[m[32m<!--<corners android:radius="40dp" />-->[m
+[32m+[m[32m<!--<solid android:color="@color/white" />-->[m
+[32m+[m[32m<!--</shape>-->[m
+\ No newline at end of file[m
+[1mdiff --git a/app/src/main/res/values-night/themes.xml b/app/src/main/res/values-night/themes.xml[m
+[1mindex 2eca6e9..b32605b 100644[m
+[1m--- a/app/src/main/res/values-night/themes.xml[m
+[1m+++ b/app/src/main/res/values-night/themes.xml[m
+[36m@@ -2,7 +2,7 @@[m
+     <!-- Base application theme. -->[m
+     <style name="Theme.TNPConnect" parent="Theme.MaterialComponents.DayNight.NoActionBar">[m
+         <!-- Primary brand color. -->[m
+[31m-        <item name="colorPrimary">@color/orange</item>[m
+[32m+[m[32m        <item name="colorPrimary">@color/orangeDark</item>[m
+         <item name="colorPrimaryVariant">@color/orange</item>[m
+         <item name="colorOnPrimary">@color/orange</item>[m
+         <!-- Secondary brand color. -->[m
+[1mdiff --git a/app/src/main/res/values/themes.xml b/app/src/main/res/values/themes.xml[m
+[1mindex 2eca6e9..b32605b 100644[m
+[1m--- a/app/src/main/res/values/themes.xml[m
+[1m+++ b/app/src/main/res/values/themes.xml[m
+[36m@@ -2,7 +2,7 @@[m
+     <!-- Base application theme. -->[m
+     <style name="Theme.TNPConnect" parent="Theme.MaterialComponents.DayNight.NoActionBar">[m
+         <!-- Primary brand color. -->[m
+[31m-        <item name="colorPrimary">@color/orange</item>[m
+[32m+[m[32m        <item name="colorPrimary">@color/orangeDark</item>[m
+         <item name="colorPrimaryVariant">@color/orange</item>[m
+         <item name="colorOnPrimary">@color/orange</item>[m
+         <!-- Secondary brand color. -->[m

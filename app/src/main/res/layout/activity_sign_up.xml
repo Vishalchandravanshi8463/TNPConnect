@@ -12,6 +12,7 @@
         android:id="@+id/imageIcon"
         android:layout_width="300dp"
         android:layout_height="300dp"
+        android:layout_marginTop="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,7 +24,8 @@
         android:orientation="vertical"
         android:background="@drawable/rounded_button_background"
         android:backgroundTint="@color/orange"
-        android:layout_margin="50dp"
+        android:layout_margin="20dp"
+
         android:id="@+id/googleSignUp"
         app:layout_constraintTop_toBottomOf="@id/imageIcon"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,27 +35,32 @@
         <TextView
             android:id="@+id/btnSignUpWithMobileNumber"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:textColor="@color/orangeDark"
+            android:layout_height="50dp"
             android:background="@drawable/rounded_button_background"
             android:padding="10dp"
+            android:textStyle="bold"
             android:text="Sign up with Mobile Number"
             android:textSize="22sp"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginTop="10dp"
             android:orientation="horizontal"
+            android:padding="2dp"
             android:background="@drawable/rounded_button_background"
-            android:weightSum="2">
+            android:weightSum="1">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Sign up with "
-                android:textStyle="italic"
+                android:textColor="@color/orangeDark"
+                android:textStyle="bold"
                 android:textSize="22sp"
+
                 android:layout_gravity="center"
                 android:layout_marginStart="50dp"/>
 
@@ -69,8 +76,25 @@
                 />
         </LinearLayout>
 
+
+
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/btnSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rounded_button_background"
+        android:backgroundTint="@color/orange"
+        android:padding="10dp"
+        android:text="Already have an Account Login"
+        android:textSize="22sp"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 
