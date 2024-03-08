@@ -7,12 +7,15 @@
     android:background="@color/orange"
     android:orientation="vertical"
     android:gravity="center"
+    android:weightSum="100"
+    android:padding="8dp"
     tools:context=".SignUpPhoneNumberActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_weight="10"
         android:gravity="center"
         >
 
@@ -38,7 +41,7 @@
             android:layout_height="32dp"
             android:layout_margin="10dp"
             android:background="@drawable/circular_bg"
-            android:backgroundTint="@color/orangeDark"
+            android:backgroundTint="@color/lightGray"
             >
             <TextView
                 android:layout_width="wrap_content"
@@ -55,7 +58,7 @@
             android:layout_height="32dp"
             android:layout_margin="10dp"
             android:background="@drawable/circular_bg"
-            android:backgroundTint="@color/orangeDark"
+            android:backgroundTint="@color/lightGray"
             >
             <TextView
                 android:layout_width="wrap_content"
@@ -72,6 +75,8 @@
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:layout_weight="10"
+
         android:src="@drawable/baseline_phone_android_24"
         app:tint="@color/orangeDark"
         />
@@ -79,24 +84,72 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="3"
         android:textSize="25sp"
         android:letterSpacing="0.08"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textStyle="bold"
+
         android:text="Enter your mobile number"
-        android:gravity="center_vertical"
+        android:gravity="center"
         />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="4"
+        android:layout_gravity="center"
+        android:gravity="center"
         >
 
+        <com.hbb20.CountryCodePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:ccp_showFlag="false"
+            app:ccp_showNameCode="false"
+            />
+
         <EditText
-            android:layout_width="10dp"
-            android:layout_height="10dp" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:hint="Mobile"
+            android:textStyle="bold"
+            android:inputType="phone"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_button_background"
+            android:elevation="5dp"
+            />
     </LinearLayout>
 
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center_vertical"
+        android:layout_weight="10"
+        android:orientation="vertical"
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send OTP"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:background="@drawable/rounded_button_background"
+            />
+        <ProgressBar
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/orangeDark"
+            android:layout_gravity="center"
+
+            />
+    </LinearLayout>
 
 
 </LinearLayout>

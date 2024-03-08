@@ -19,13 +19,12 @@ class SignUpActivity : AppCompatActivity() {
 
 
         btnSignUp=findViewById(R.id.btnSignUpWithMobileNumber)
-
         btnSignUp.setOnClickListener {
             startActivity(Intent(this,SignUpPhoneNumberActivity::class.java))
         }
 
-        btnGoogleSignUp=findViewById(R.id.googleSignUp)
 
+        btnGoogleSignUp=findViewById(R.id.googleSignUp)
         btnGoogleSignUp.setOnClickListener {
 
             Toast.makeText(this, "Google Button Click", Toast.LENGTH_SHORT).show()
@@ -33,11 +32,9 @@ class SignUpActivity : AppCompatActivity() {
 
 
         btnSignInn=findViewById(R.id.btnSignIn)
-
         btnSignInn.setOnClickListener {
             startActivity(Intent(this,SignIn::class.java))
         }
-
 
     }
 }
