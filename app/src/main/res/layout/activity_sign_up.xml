@@ -17,22 +17,61 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/videocall" />
 
-    <Button
-        android:id="@+id/btnSignUpWithMobileNumber"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:orientation="vertical"
         android:background="@drawable/rounded_button_background"
-        android:backgroundTint="@color/orangeDark"
-        android:padding="10dp"
-        android:text="SignUp with Mobile Number"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.157"
-        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/orange"
+        android:layout_margin="50dp"
+        android:id="@+id/googleSignUp"
         app:layout_constraintTop_toBottomOf="@id/imageIcon"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/btnSignUpWithMobileNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button_background"
+            android:padding="10dp"
+            android:text="Sign up with Mobile Number"
+            android:textSize="22sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_button_background"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Sign up with "
+                android:textStyle="italic"
+                android:textSize="22sp"
+                android:layout_gravity="center"
+                android:layout_marginStart="50dp"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="85sp"
+                android:id="@+id/imgGoogle"
+                android:background="@drawable/circular_bg"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/google"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
