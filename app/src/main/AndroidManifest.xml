@@ -11,24 +11,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TNPConnect"
         tools:targetApi="31">
-
+        <activity
+            android:name=".SignUpPhoneNumberActivity"
+            android:exported="false" />
         <!-- Keep the SplashScreen activity -->
+        <activity
+            android:name=".SignUpActivity"
+            android:label="SignUpActivity"></activity>
         <activity
             android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Remove the SignUpActivity and LoginActivity activities -->
+        </activity> <!-- Remove the SignUpActivity and LoginActivity activities -->
         <!-- Keep MainActivity activity -->
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
-
-        <!-- Keep the meta-data tag -->
+            android:exported="false" /> <!-- Keep the meta-data tag -->
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

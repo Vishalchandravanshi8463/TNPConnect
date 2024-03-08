@@ -27,20 +27,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        topAnim=AnimationUtils.loadAnimation(this,R.anim.top_animation)
-        bottomAnim=AnimationUtils.loadAnimation(this,R.anim.bottom_animation)
-
-        image=findViewById(R.id.imageView)
-        appNamee=findViewById(R.id.appName)
-
-        image.setAnimation(topAnim)
-        appNamee.setAnimation(bottomAnim)
-
-
-        Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this,SignUpActivity::class.java))
-            finish()
-        },3000)
+//        topAnim=AnimationUtils.loadAnimation(this,R.anim.top_animation)
+//        bottomAnim=AnimationUtils.loadAnimation(this,R.anim.bottom_animation)
+//
+//        image=findViewById(R.id.imageView)
+//        appNamee=findViewById(R.id.appName)
+//
+//        image.setAnimation(topAnim)
+//        appNamee.setAnimation(bottomAnim)
+//
+//
+//        Handler(Looper.getMainLooper()).postDelayed({
+//            startActivity(Intent(this,SignUpActivity::class.java))
+//            finish()
+//        },3000)
 
     }
 }
