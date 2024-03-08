@@ -24,7 +24,11 @@
         android:background="@drawable/rounded_button_background"
         android:backgroundTint="@color/orange"
         android:layout_margin="20dp"
+<<<<<<< HEAD
         android:id="@+id/googleSignUp"
+=======
+
+>>>>>>> 5b70f7a0d733120d2a64c852d2df7378ec3ff643
         app:layout_constraintTop_toBottomOf="@id/imageIcon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,6 +46,7 @@
             android:textSize="22sp"/>
 
         <LinearLayout
+            android:id="@+id/googleSignUp"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
