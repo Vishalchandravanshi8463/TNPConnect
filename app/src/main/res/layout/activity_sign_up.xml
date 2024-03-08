@@ -7,7 +7,6 @@
     android:background="@color/orange"
     tools:context=".SignUpActivity">
 
-
     <ImageView
         android:id="@+id/imageIcon"
         android:layout_width="300dp"
@@ -25,7 +24,6 @@
         android:background="@drawable/rounded_button_background"
         android:backgroundTint="@color/orange"
         android:layout_margin="20dp"
-
         app:layout_constraintTop_toBottomOf="@id/imageIcon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,13 +58,13 @@
                 android:textColor="@color/orangeDark"
                 android:textStyle="bold"
                 android:textSize="22sp"
-
                 android:layout_gravity="center"
                 android:layout_marginStart="50dp"/>
 
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:padding="3dp"
                 android:layout_weight="1"
                 android:layout_marginEnd="85sp"
                 android:id="@+id/imgGoogle"
@@ -75,9 +73,6 @@
                 android:src="@drawable/google"
                 />
         </LinearLayout>
-
-
-
     </LinearLayout>
 
     <TextView
@@ -95,7 +90,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

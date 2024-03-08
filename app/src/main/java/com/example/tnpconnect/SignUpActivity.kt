@@ -30,11 +30,14 @@ class SignUpActivity : AppCompatActivity() {
             Toast.makeText(this, "Google Button Click", Toast.LENGTH_SHORT).show()
         }
 
-
         btnSignInn=findViewById(R.id.btnSignIn)
         btnSignInn.setOnClickListener {
             startActivity(Intent(this,SignIn::class.java))
         }
 
+
+        fun show() {
+
+        }
     }
 }
