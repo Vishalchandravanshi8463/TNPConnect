@@ -33,9 +33,5 @@ class SignUpActivity : AppCompatActivity() {
         btnSignInn.setOnClickListener {
             startActivity(Intent(this,SignIn::class.java))
         }
-
-        fun show() {
-
-        }
     }
 }
