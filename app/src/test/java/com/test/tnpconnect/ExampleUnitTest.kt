@@ -1,4 +1,4 @@
-package com.example.tnpconnect
+package com.test.tnpconnect
 
 import org.junit.Test
 

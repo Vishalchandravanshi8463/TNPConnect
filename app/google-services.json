@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1082955319181",
+    "project_id": "tnpconnect-d3136",
+    "storage_bucket": "tnpconnect-d3136.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082955319181:android:e074c21219b59e87ff5fc4",
+        "android_client_info": {
+          "package_name": "com.test.tnpconnect"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAszXT0yobXinNwSdBtL4C5SnOC29q8u_s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

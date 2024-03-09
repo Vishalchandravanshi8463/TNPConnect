@@ -1,4 +1,4 @@
-package com.example.tnpconnect
+package com.test.tnpconnect
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package com.example.tnpconnect
+package com.test.tnpconnect
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import com.google.firebase.firestore.FirebaseFirestore
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -25,8 +26,7 @@ class SignUpActivity : AppCompatActivity() {
 
         btnGoogleSignUp=findViewById(R.id.googleSignUp)
         btnGoogleSignUp.setOnClickListener {
-
-            Toast.makeText(this, "Google Button Click", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Google Button Clicked..", Toast.LENGTH_SHORT).show()
         }
 
         btnSignInn=findViewById(R.id.btnSignIn)

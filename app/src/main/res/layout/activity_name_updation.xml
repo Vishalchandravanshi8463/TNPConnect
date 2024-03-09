@@ -41,29 +41,28 @@
             android:layout_height="32dp"
             android:layout_margin="10dp"
             android:background="@drawable/circular_bg"
-            android:backgroundTint="@color/lightGray"
+            android:backgroundTint="@color/orangeDark"
             >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:layout_centerInParent="true"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:text="2"/>
 
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_margin="10dp"
             android:background="@drawable/circular_bg"
-            android:backgroundTint="@color/lightGray"
-            >
+            android:backgroundTint="@color/orangeDark">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:layout_centerInParent="true"
                 android:textColor="@color/white"
                 android:textSize="18sp"
@@ -71,87 +70,56 @@
 
         </RelativeLayout>
     </LinearLayout>
-    
+
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_weight="10"
-
-        android:src="@drawable/baseline_phone_android_24"
-        app:tint="@color/orangeDark"
+        android:src="@drawable/person"
         />
 
-    <TextView
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="3"
-        android:textSize="25sp"
-        android:letterSpacing="0.08"
-        android:textColor="@color/black"
+        android:id="@+id/edtOtp"
+        android:padding="10dp"
+        android:hint="Enter your name"
         android:textStyle="bold"
-
-        android:text="Enter your mobile number"
         android:gravity="center"
-        />
+        android:inputType="number"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/rounded_button_background"
+        android:elevation="5dp"/>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_weight="4"
-        android:layout_gravity="center"
-        android:gravity="center"
-        >
-
-        <com.hbb20.CountryCodePicker
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/countryCode"
-            app:ccp_showFlag="false"
-            app:ccp_showNameCode="false"
-            />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/phoneNumber"
-            android:padding="10dp"
-            android:hint="Mobile"
-            android:textStyle="bold"
-            android:inputType="phone"
-            android:textSize="20dp"
-            android:textColor="@color/black"
-            android:layout_margin="10dp"
-            android:background="@drawable/rounded_button_background"
-            android:elevation="5dp"
-            />
-    </LinearLayout>
-
-    <LinearLayout
-
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:gravity="center_vertical"
         android:layout_weight="10"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnSend"
-            android:text="Send OTP"
+            android:id="@+id/verifyOTP"
+            android:text="Update"
             android:textStyle="bold"
             android:textSize="20dp"
             android:textColor="@color/black"
-            android:background="@drawable/rounded_button_background"
-            />
+            android:background="@drawable/rounded_button_background"/>
+
         <ProgressBar
             android:layout_width="32dp"
             android:layout_height="wrap_content"
             android:id="@+id/progressBar"
             android:indeterminateTint="@color/orangeDark"
             android:layout_gravity="center"/>
-    </LinearLayout>
 
+    </LinearLayout>
 
 </LinearLayout>

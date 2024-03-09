@@ -1,11 +1,11 @@
-package com.example.tnpconnect
+package com.test.tnpconnect
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class SignUpPhoneNumberActivity : AppCompatActivity() {
+class SignIn : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_up_phone_number)
+        setContentView(R.layout.activity_sign_in)
     }
 }

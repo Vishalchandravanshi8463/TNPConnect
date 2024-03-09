@@ -1,4 +1,4 @@
-package com.example.tnpconnect
+package com.test.tnpconnect
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,7 +7,6 @@ import android.os.Handler
 import android.os.Looper
 import android.view.WindowManager
 import android.view.animation.AnimationUtils
-
 import android.view.animation.Animation
 import android.widget.ImageView
 import android.widget.TextView
