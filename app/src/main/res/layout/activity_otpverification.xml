@@ -135,6 +135,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/resendOTP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Resend otp"
@@ -144,6 +145,5 @@
         android:padding="10dp"
         android:layout_marginTop="60dp"
         />
-
 
 </LinearLayout>
