@@ -7,17 +7,27 @@ public class UserModel {
     private String userName;
     private Timestamp createdTimeStamp;
     private String userId;
-    private String fcmToken;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    private String email;
 
     public UserModel() {
 
     }
 
-    public UserModel(String userId, String phone, String userName, Timestamp createdTimeStamp) {
+    public UserModel(String userId, String phone, String userName, Timestamp createdTimeStamp, String mail) {
         this.userId = userId;
         this.phone = phone;
         this.userName = userName;
         this.createdTimeStamp = createdTimeStamp;
+        this.email = mail;
     }
 
     public String getUserId() {
@@ -50,13 +60,5 @@ public class UserModel {
 
     public void setCreatedTimeStamp(Timestamp createdTimeStamp) {
         this.createdTimeStamp = createdTimeStamp;
-    }
-
-    public String getFcmToken() {
-        return fcmToken;
-    }
-
-    public void setFcmToken(String fcmToken) {
-        this.fcmToken = fcmToken;
     }
 }

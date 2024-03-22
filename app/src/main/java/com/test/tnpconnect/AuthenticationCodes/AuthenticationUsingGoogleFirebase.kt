@@ -12,7 +12,10 @@ import com.test.tnpconnect.R
 import com.test.tnpconnect.SignUpActivity
 import com.google.android.gms.auth.api.Auth
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.firebase.Timestamp
+import com.test.tnpconnect.Model.UserModel
 import com.test.tnpconnect.Util.AndroidUtil
+import com.test.tnpconnect.Util.FirebaseUtil
 
 class AuthenticationUsingGoogleFirebase(private val activity : Activity) {
     private val firebaseAuth = FirebaseAuth.getInstance()
@@ -49,13 +52,33 @@ class AuthenticationUsingGoogleFirebase(private val activity : Activity) {
                         val user = FirebaseAuth.getInstance().currentUser
                         AndroidUtil.printMessage(activity, "Authenticated as ${user?.displayName}")
 
+                        FirebaseUtil.currentUserDetails().get().addOnCompleteListener { task ->
+                            if(task.isSuccessful) {
+                                var user = task.getResult().toObject(UserModel::class.java)
+
+                                if(user == null) {
+                                    user = UserModel(
+                                        FirebaseUtil.getCurrentUserId(),
+                                        "",
+                                        google?.displayName,
+                                        Timestamp.now(),
+                                        google?.email
+                                    )
+
+                                    FirebaseUtil.currentUserDetails().set(user).addOnCompleteListener {
+                                        AndroidUtil.printMessage(activity, "User added..")
+                                    }
+                                }
+                            }
+                        }
+
                         val intent = Intent(context, MainActivity::class.java)
                         context.startActivity(intent)
                         (context as Activity).finish()
                         return@addOnCompleteListener
                     }
 
-                    AndroidUtil.printMessage(activity, "Updated Profile..")
+                    AndroidUtil.printMessage(activity, "Signed in as ${google?.displayName}")
                 } else {
                     AndroidUtil.printMessage(activity, "Authentication failed!!")
                 }

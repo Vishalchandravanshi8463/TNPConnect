@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import com.google.android.material.button.MaterialButton
 import com.google.firebase.auth.FirebaseAuth
 import com.test.tnpconnect.AuthenticationCodes.AuthenticationUsingGoogleFirebase
 import com.test.tnpconnect.databinding.ActivitySignUpBinding
@@ -18,8 +19,7 @@ open class SignUpActivity : AppCompatActivity() {
     private lateinit var binding : ActivitySignUpBinding
     private lateinit var authHelper : AuthenticationUsingGoogleFirebase
     private lateinit var btnSignUp:TextView
-    private lateinit var btnGoogleSignUp:LinearLayout
-    private lateinit var btnSignInn:TextView
+    private lateinit var btnGoogleSignUp: MaterialButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
@@ -41,17 +41,11 @@ open class SignUpActivity : AppCompatActivity() {
             startActivity(Intent(this,SignUpPhoneNumberActivity::class.java))
         }
 
-        btnGoogleSignUp = binding.googleSignUp
-
-        btnSignInn = binding.btnSignIn
-        btnSignInn.setOnClickListener {
-            startActivity(Intent(this,SignIn::class.java))
-        }
+        btnGoogleSignUp = binding.btnSignUpWithGoogle
 
         //from here all code of signup with google
         btnGoogleSignUp.setOnClickListener {
             Toast.makeText(this, "Google Button Clicked..", Toast.LENGTH_SHORT).show()
-//            signIn()
             authHelper.signInWithGoogle(RC_SIGN_IN)
         }
     }

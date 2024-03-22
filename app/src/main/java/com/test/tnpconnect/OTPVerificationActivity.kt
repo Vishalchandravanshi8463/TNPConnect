@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.TextView
+import com.google.android.material.button.MaterialButton
 import com.test.tnpconnect.AuthenticationCodes.AuthenticateUsingPhone
 import com.test.tnpconnect.Util.AndroidUtil
 import com.test.tnpconnect.databinding.ActivityOtpverificationBinding
@@ -15,7 +16,7 @@ class OTPVerificationActivity : AppCompatActivity() {
     private lateinit var phone : String
     private lateinit var enteredOTP : EditText
     private lateinit var pb : ProgressBar
-    private lateinit var btnVerify : Button
+    private lateinit var btnVerify : MaterialButton
     private lateinit var resendOTP:TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,7 +35,11 @@ class OTPVerificationActivity : AppCompatActivity() {
         AuthenticateUsingPhone.sendOTP(phone, false, pb, btnVerify, this)
 
         btnVerify.setOnClickListener {
-            AuthenticateUsingPhone.verifyOTP(enteredOTP.text.toString(), this, pb, btnVerify)
+            val otp = enteredOTP.text.toString()
+
+            if (otp.length == 6)
+            AuthenticateUsingPhone.verifyOTP(otp, this, pb, btnVerify)
+            else enteredOTP.setError("OTP should be of 6 digits")
         }
 
         resendOTP.setOnClickListener {

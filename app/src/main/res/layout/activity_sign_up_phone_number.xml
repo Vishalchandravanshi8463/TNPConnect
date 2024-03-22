@@ -76,9 +76,8 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_weight="10"
-
         android:src="@drawable/baseline_phone_android_24"
-        app:tint="@color/orangeDark"
+        app:tint="@color/black"
         />
 
     <TextView
@@ -89,7 +88,6 @@
         android:letterSpacing="0.08"
         android:textColor="@color/black"
         android:textStyle="bold"
-
         android:text="Enter your mobile number"
         android:gravity="center"
         />
@@ -130,28 +128,34 @@
     <LinearLayout
 
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="130dp"
         android:gravity="center_vertical"
         android:layout_weight="10"
-        android:orientation="vertical"
-        >
-        <Button
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSend"
+            style="@style/Widget.MaterialComponents.Button.Icon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnSend"
             android:text="Send OTP"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:textColor="@color/black"
-            android:background="@drawable/rounded_button_background"
-            />
+            android:padding="10dp"
+            android:textColor="@color/orangeDark"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="30dp"
+            android:textSize="20sp"
+            app:backgroundTint="@color/white"
+            app:cornerRadius="8dp"
+            app:rippleColor="@color/orangeDark"
+            app:strokeWidth="1dp"/>
+
         <ProgressBar
             android:layout_width="32dp"
             android:layout_height="wrap_content"
             android:id="@+id/progressBar"
-            android:indeterminateTint="@color/orangeDark"
+            android:layout_marginTop="10dp"
+            android:indeterminateTint="@color/black"
             android:layout_gravity="center"/>
     </LinearLayout>
-
-
 </LinearLayout>

@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
+import com.google.android.material.button.MaterialButton
 import com.hbb20.CountryCodePicker
 import com.test.tnpconnect.databinding.ActivitySignUpPhoneNumberBinding
 
@@ -15,7 +16,7 @@ class SignUpPhoneNumberActivity : AppCompatActivity() {
     private lateinit var binding : ActivitySignUpPhoneNumberBinding
     private lateinit var countryCodePicker : CountryCodePicker
     private lateinit var number : EditText
-    private lateinit var btnSendOTP : Button
+    private lateinit var btnSendOTP : MaterialButton
     private lateinit var pb : ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
