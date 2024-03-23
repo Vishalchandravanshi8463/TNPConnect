@@ -2,5 +2,7 @@
     <string name="app_name">TNPConnect</string>
 
     <string name="default_web_client_id">1082955319181-t3g14foed3o54elu83pad3bmhfe9hc59.apps.googleusercontent.com</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
