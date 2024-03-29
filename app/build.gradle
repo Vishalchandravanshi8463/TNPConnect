@@ -65,4 +65,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth-ktx'
     implementation 'com.google.android.gms:play-services-auth:20.5.0'
 
+    //for card view
+    implementation 'com.google.android.material:material:1.11.0'
+
+
 }

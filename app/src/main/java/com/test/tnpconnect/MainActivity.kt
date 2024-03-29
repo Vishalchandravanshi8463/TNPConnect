@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity() {
             true
         }
     }
-
     private fun replaceWithFragement(fragment : Fragment) {
 
         val fragmentManager=supportFragmentManager
