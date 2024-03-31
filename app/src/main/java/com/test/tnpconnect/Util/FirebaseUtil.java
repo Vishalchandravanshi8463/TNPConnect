@@ -12,4 +12,9 @@ public class FirebaseUtil {
     public static DocumentReference currentUserDetails() {
         return FirebaseFirestore.getInstance().collection("users").document(getCurrentUserId());
     }
+
+    public static void logout()
+    {
+        FirebaseAuth.getInstance().signOut();
+    }
 }
