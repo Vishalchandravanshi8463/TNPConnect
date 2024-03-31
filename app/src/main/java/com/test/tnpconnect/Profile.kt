@@ -1,14 +1,19 @@
 package com.test.tnpconnect
 
+import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.fragment.app.Fragment
+import com.github.dhaval2404.imagepicker.ImagePicker
 import com.google.android.material.textfield.TextInputEditText
 import com.test.tnpconnect.Model.UserModel
 import com.test.tnpconnect.Util.AndroidUtil
@@ -18,6 +23,7 @@ import de.hdodenhof.circleimageview.CircleImageView
 class Profile : Fragment() {
 
     private lateinit var profilePic: CircleImageView
+    private lateinit var addImage: CircleImageView
     private lateinit var userNameInput: TextInputEditText
     private lateinit var phoneInput: TextInputEditText
     private lateinit var email: TextInputEditText
@@ -26,8 +32,24 @@ class Profile : Fragment() {
 
     private lateinit var currentUserModel: UserModel
 
+    private lateinit var imagePickLauncher: ActivityResultLauncher<Intent>
+    private var selectedImageUri: Uri? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        imagePickLauncher = registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult()
+        ) { result ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                val data: Intent? = result.data
+                data?.data?.let { uri ->
+                    selectedImageUri = uri
+
+                    AndroidUtil.setProfilePic(context,selectedImageUri,profilePic)
+                }
+            }
+        }
     }
 
     override fun onCreateView(
@@ -37,6 +59,7 @@ class Profile : Fragment() {
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
 
         profilePic = view.findViewById(R.id.profile_image)
+        addImage = view.findViewById(R.id.add_image)
         userNameInput = view.findViewById(R.id.txtName)
         phoneInput = view.findViewById(R.id.txtNumber)
         email = view.findViewById(R.id.txtEmail)
@@ -57,6 +80,16 @@ class Profile : Fragment() {
             startActivity(intent)
         }
 
+        addImage.setOnClickListener {
+            ImagePicker.with(this)
+                .cropSquare()
+                .compress(512)
+                .maxResultSize(512, 512)
+                .createIntent { intent ->
+                    imagePickLauncher.launch(intent)
+                }
+        }
+
 
         return view
     }
@@ -69,9 +102,19 @@ class Profile : Fragment() {
             return
         }
         currentUserModel.userName = newUserName
-        updateToFireStore()
 
-
+        if (selectedImageUri != null) {
+            FirebaseUtil.getCurrentProfilePicStorageRef().putFile(selectedImageUri!!)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        updateToFireStore()
+                    }
+                }
+        }
+        else
+        {
+            updateToFireStore()
+        }
     }
 
     private fun updateToFireStore() {
@@ -84,11 +127,24 @@ class Profile : Fragment() {
                 }
             }
     }
+
     private fun showToast(message: String) {
         Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
     }
 
     private fun getUserData() {
+
+
+        FirebaseUtil.getCurrentProfilePicStorageRef().downloadUrl
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    val uri: Uri? = task.result
+                    uri?.let {
+                        AndroidUtil.setProfilePic(requireContext(), it, profilePic)
+                    }
+                }
+            }
+
         FirebaseUtil.currentUserDetails().get().addOnCompleteListener { task ->
             if (task.isSuccessful) {
                 val document = task.result

@@ -139,11 +139,11 @@
             android:id="@+id/txtLogout"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
-
-            android:layout_margin="20dp"
+            android:layout_marginTop="30dp"
             android:textColor="@color/white"
             android:text="Logout"
-            android:textSize="25dp"
+            android:textSize="20dp"
+            android:gravity="center"
 
             app:layout_constraintEnd_toEndOf="@+id/btnUpdate"
             app:layout_constraintStart_toStartOf="@+id/btnUpdate"
