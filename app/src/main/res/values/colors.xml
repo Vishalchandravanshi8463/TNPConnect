@@ -8,12 +8,12 @@
     <color name="teal_700">#FF018786</color>
 
     <color name="orange">#FA6739</color>
+    <color name="orange_fade">#FBA487</color>
     <color name="orangeDark">#C1220D</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="lightGray">#B3A9A9</color>
+    <color name="lightGray">#D6D3D3</color>
     <color name="lightGreen">#B2E676</color>
 
     <color name="orangeGood">#EA3A22</color>
-
 </resources>

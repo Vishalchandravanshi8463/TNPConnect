@@ -1,136 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/orange"
+    android:background="@color/orange_fade"
     tools:context=".Home">
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/createMeetingCardView"
             android:backgroundTint="@color/orangeGood"
-            android:layout_width="340dp"
-            android:layout_height="200dp"
-            android:layout_marginTop="50dp"
+            android:layout_width="300dp"
+            android:layout_height="140dp"
+            android:layout_margin="50dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-
             app:cardElevation="50dp"
-            app:cardCornerRadius="45dp"
-
-
-            >
+            app:cardCornerRadius="45dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
-
-
                 />
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_marginTop="30dp"
                     android:src="@drawable/callingphotoinorange"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-              />
+                    app:layout_constraintStart_toStartOf="parent"/>
 
                 <TextView
-
                     android:id="@+id/createMeeting"
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:text="Create a Meeting"
+                    android:text="CREATE   MEETING"
                     android:gravity="center"
                     android:textColor="@color/white"
-                    android:textSize="32dp"
+                    android:textSize="26sp"
                     android:textStyle="bold"
-
-
+                    android:layout_marginTop="10dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView"
-
-                    />
-
-
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
-
         <androidx.cardview.widget.CardView
-            android:id="@+id/joinMeeting"
+            android:id="@+id/joinMeetingCardView"
             android:backgroundTint="@color/orangeGood"
-            android:layout_width="340dp"
-            android:layout_height="200dp"
+            android:layout_width="300dp"
+            android:layout_height="140dp"
             android:layout_marginTop="30dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/createMeetingCardView"
-
             app:cardElevation="50dp"
-            app:cardCornerRadius="45dp"
-
-
-            >
+            app:cardCornerRadius="45dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
-
-
                 />
 
                 <ImageView
                     android:id="@+id/imageView2"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_marginTop="30dp"
                     android:src="@drawable/callingphotoinorange"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    />
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
-
                     android:id="@+id/joinMeetingText"
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Join Meeting"
+                    android:text="JOIN  MEETING"
                     android:textColor="@color/white"
-                    android:textSize="32dp"
+                    android:textSize="26sp"
                     android:textStyle="bold"
-
-
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView2"
-
-                    />
-
-
+                    app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </FrameLayout>

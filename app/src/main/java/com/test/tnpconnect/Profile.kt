@@ -29,9 +29,7 @@ class Profile : Fragment() {
     private lateinit var email: TextInputEditText
     private lateinit var btnUpdate: Button
     private lateinit var txtLogout: TextView
-
     private lateinit var currentUserModel: UserModel
-
     private lateinit var imagePickLauncher: ActivityResultLauncher<Intent>
     private var selectedImageUri: Uri? = null
 
@@ -74,7 +72,6 @@ class Profile : Fragment() {
 
         txtLogout.setOnClickListener {
             FirebaseUtil.logout()
-
             val intent = Intent(requireContext(), SplashScreen::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
@@ -89,7 +86,6 @@ class Profile : Fragment() {
                     imagePickLauncher.launch(intent)
                 }
         }
-
 
         return view
     }
@@ -110,9 +106,7 @@ class Profile : Fragment() {
                         updateToFireStore()
                     }
                 }
-        }
-        else
-        {
+        } else {
             updateToFireStore()
         }
     }
@@ -133,8 +127,6 @@ class Profile : Fragment() {
     }
 
     private fun getUserData() {
-
-
         FirebaseUtil.getCurrentProfilePicStorageRef().downloadUrl
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {

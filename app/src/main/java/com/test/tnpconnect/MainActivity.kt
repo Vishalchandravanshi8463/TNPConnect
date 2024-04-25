@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
     private fun replaceWithFragement(fragment : Fragment) {
-
         val fragmentManager=supportFragmentManager
         val fragmentTransaction=fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.FrameLayout,fragment)
