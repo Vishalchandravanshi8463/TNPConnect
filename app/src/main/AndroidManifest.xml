@@ -17,9 +17,6 @@
             android:name=".conferenceStartActivity"
             android:exported="false" />
         <activity
-            android:name=".Conference"
-            android:exported="false" />
-        <activity
             android:name=".EnterMeeting"
             android:exported="false" />
         <activity

@@ -23,7 +23,6 @@ class SplashScreen : AppCompatActivity() {
 
         setContentView(R.layout.activity_splash_screen)
 
-
         topAnim= AnimationUtils.loadAnimation(this,R.anim.top_animation)
         bottomAnim= AnimationUtils.loadAnimation(this,R.anim.bottom_animation)
 
@@ -33,12 +32,9 @@ class SplashScreen : AppCompatActivity() {
         image.setAnimation(topAnim)
         appNamee.setAnimation(bottomAnim)
 
-
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this,SignUpActivity::class.java))
             finish()
         },3000)
-
     }
-
 }

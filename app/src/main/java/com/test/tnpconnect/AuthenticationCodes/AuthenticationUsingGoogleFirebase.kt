@@ -37,7 +37,6 @@ class AuthenticationUsingGoogleFirebase(private val activity : Activity) {
             val account = task.signInAccount
             firebaseAuthWithGoogle(account, context)
         } else {
-            // Handle sign-in failure
             AndroidUtil.printMessage(activity, "Google Sign in failed!!")
         }
     }

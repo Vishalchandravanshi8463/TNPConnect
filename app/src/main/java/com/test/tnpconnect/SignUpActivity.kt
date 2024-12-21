@@ -25,15 +25,13 @@ open class SignUpActivity : AppCompatActivity() {
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //This for if user is already sigin
         authHelper = AuthenticationUsingGoogleFirebase(this)
         val currentUser = FirebaseAuth.getInstance().currentUser
 
         if (currentUser != null) {
-            // The user is already signed in, navigate to MainActivity
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            finish() // finish the current activity to prevent the user from coming back to the SignInActivity using the back button
+            finish()
         }
 
         btnSignUp = binding.btnSignUpWithMobileNumber
